@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+    >
+    <script src="https://kit.fontawesome.com/7367195fcc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ticket Online</title>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.svg" alt="" width="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="input-group mx-md-4">
+                <input class="form-control me-2 " type="search" placeholder="Cerca events, llocs, ciutats..."
+                       aria-label="Cerca events, llocs, ciutats..."
+                >
+                <button class="btn btn-outline-success" type="button"><i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inici</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Música</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">esports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Teatre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Més...</a>
+                </li>
+            </ul>
+            <div class="ms-auto mb-2 mb-lg-0">
+                <button class="btn btn-outline-success"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                >Login
+                </button>
+            </div>
+
+        </div>
+    </div>
+</nav>
+<!-- fi navbar -->
+
+<section id="cercador" class="container pt-5 pb-5">
+    <div class="col-12 text-secondary">
+        <span>s'han trobat 200 resultats</span>
+    </div>
+    <div class="row pb-3 caixa-cerca bg-light">
+        <div class="col-12 col-md-3 pt-2">
+            <label for="form-poblacio" class="form-label">Població</label>
+            <select class="form-select border-secondary" aria-label="Població" id="form-poblacio">
+                <option selected>tria una</option>
+                <option value="1">Barcelona</option>
+                <option value="2">Tarragona</option>
+                <option value="3">Lleida</option>
+                <option value="4">Girona</option>
+            </select>
+        </div>
+        <div class="col-12 col-md-3 pt-2">
+            <label for="form-categoria" class="form-label">Categoria</label>
+            <select class="form-select border-secondary" aria-label="Categoria" id="form-categoria">
+                <option>tria una</option>
+                <option selected value="1">Música</option>
+                <option value="2">Esports</option>
+                <option value="3">Teatre</option>
+                <option value="4">Altres</option>
+            </select>
+        </div>
+        <div class="col-12 col-md-3 pt-2">
+            <label for="form-dateStart" class="form-label">des de</label>
+            <input type="date" class="form-control border-secondary" id="form-dateStart">
+        </div>
+        <div class="col-12 col-md-3 pt-2">
+            <label for="form-dateEnd" class="form-label">fins a</label>
+            <input type="date" class="form-control border-secondary" id="form-dateEnd">
+        </div>
+    </div>
+
+</section>
+
+<section id="resultat-cerca">
+    <div class="container">
+
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle4.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Occaecat cillum sed dolore</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle2.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Anim nostrud enim aliqua tempor in</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle5.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Reprehenderit elit consequat commodo elit</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle8.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Occaecat cillum sed dolore</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle7.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Consequat labore aliqua exercitation officia minim</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle9.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Deserunt in tempor occaecat aute</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3  mb-4">
+            <div class="row g-0">
+                <div class="col-2 col-lg-1 caixa-esquerra text-center imatge-fons" style="background-image: url(img/espectacle3.jpg);">
+                </div>
+                <div class="col-10 col-lg-11 caixa-dreta">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Ex eiusmod excepteur sit enim ad duis commodo</h5>
+                            <p class="card-text"><small class="text-muted">Barcelona - des del 07/04/2022 fins al 10/05/2022</small></p>
+                            <p class="card-text"><small class="text-muted">Teatre Apolo de Bacelona</small></p>
+                        </div>
+                        <div>
+                            <h4 class="card-title d-none d-sm-block">Des de 30€</h4>
+                            <a href="detall.html" class="btn btn-success">Compra entrades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<footer class="container-fluid bg-dark">
+    <div class="container">
+        <div class="row pb-3">
+            <div class="col-sd-12 col-md-4 pt-4">
+                <p class="fs-3">Segueix-nos</p>
+                <div class="fs-2 text-center">
+                    <a href="#" class="link-light"> <i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="link-light"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="link-light"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="link-light"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="link-light"><i class="fa-solid fa-rss"></i></a>
+                    <br>
+                    <a href="#" class="link-light"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="link-light"><i class="fa-brands fa-google-play"></i></a>
+                </div>
+                <div class="text-center pt-4">
+                    <img src="img/logo.svg" alt="" width="120">
+                </div>
+
+            </div>
+            <div class="col-sd-12 col-md-4 pt-4">
+                <p class="fs-3">Ajuda</p>
+                <p class="fs-5 mt-3">Com funciona</p>
+                <p class="fs-5 mt-3">Les meves entrades</p>
+                <p class="fs-5 mt-3">Botigues</p>
+
+            </div>
+            <div class="col-sd-12 col-md-4 pt-4">
+                <p class="fs-3">Sobre nosaltres</p>
+                <p class="fs-5 mt-3">Nosaltres</p>
+                <p class="fs-5 mt-3">Protecció de dades</p>
+                <p class="fs-5 mt-3">Condicions d'us</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                © 1999-2022 TiketOnline. Tots els drets reservats.
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal login-->
+<div class="modal fade"
+     id="staticBackdrop"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabel"
+     aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Inicia sessió</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-center pb-2">
+                    <img src="img/logo.png" width="200px">
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <input type="email"
+                               aria-label="Correu electrònic"
+                               placeholder="Correu electrònic"
+                               class="form-control"
+                               id="exampleInputEmail1"
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <input type="password"
+                               aria-label="Contrasenya"
+                               placeholder="Contrasenya"
+                               class="form-control"
+                               id="exampleInputPassword1"
+                        >
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Entra</button>
+                    </div>
+                    <div><a href="#" class="link-secondary">Recupera la contrasenya</a></div>
+                    <div><a href="#" class="link-secondary">Registra't</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fi Modal login-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"
+></script>
+
+</body>
+</html>
